@@ -64,7 +64,9 @@ class CategoriaController extends Controller
     public function edit($id)
     {
         $categoria=Categoria::find($id);
-        return view('categoria.edit');
+        return view('categoria.edit')
+        ->with('categoria',$categoria)
+        ;
     }
 
     /**
@@ -76,7 +78,9 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Cat=Categoria::find($id);
+        $Cat->update($request->all());
+        return redirect(route('categoria'));  
     }
 
     /**
@@ -88,5 +92,8 @@ class CategoriaController extends Controller
     public function destroy($id)
     {
         //
+        Categoria::destroy($id);
+        return redirect(route('categoria'));
+        //dd('listos');
     }
 }
