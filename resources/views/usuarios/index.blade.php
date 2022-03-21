@@ -7,7 +7,11 @@
 <table class="table table-dark table-sm">
 <th>#</th>
     <th>Nombre</th>
+    <th>Apellido</th>
     <th>Cedula</th>
+    <th>Direccion</th>
+    <th>Telefono</th>
+    <th>Email</th>
   @foreach($usuarios as $u)
   <tr>
     <td>{{$loop->iteration}}</td>

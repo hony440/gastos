@@ -20,12 +20,11 @@ class UsersTable extends Migration
             $table->string('usu_direccion');
             $table->string('usu_telefono');
             $table->string('usu_cedula')->unique();
-            $table->integer('usu_estado')->default(1);
-            $table->string('usu_estado_civil')->nullable();
             $table->string('email')->unique();
             $table->string('password');
-            $table->foreignId('car_id')->references('car_id')->on('cargo')->default(1);
-            $table->foreignId('per_id')->references('per_id')->on('permisos')->default(1);  
+            $table->integer('usu_estado');
+            $table->foreignId('car_id')->references('car_id')->on('cargo');
+            $table->foreignId('per_id')->references('per_id')->on('permisos');  
 
             $table->rememberToken();
             $table->timestamps();

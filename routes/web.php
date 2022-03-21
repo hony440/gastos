@@ -35,4 +35,4 @@ Route::get('/categoria/edit/{cat_id}','CategoriaController@edit')->name('categor
 Route::post('/categoria/update/{cat_id}','CategoriaController@update')->name('categoria.update');
 
 
-Route::get('/categoria/destroy/{cat_id}','CategoriaController@destroy')->name('categoria.destroy');
+Route::post('/categoria/destroy/{cat_id}','CategoriaController@destroy')->name('categoria.destroy');
