@@ -7,7 +7,7 @@
 		
 		<label for=""> detalle de la categoria</label>
 		<input type="text" name="cat_nombre" id="cat_nombre">
-		<button class="btn btn-succes">guardar</button>
+		<button class="btn btn-succes">Guardar</button>
 
 	</form>
 
