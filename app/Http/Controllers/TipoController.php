@@ -16,7 +16,7 @@ class TipoController extends Controller
     public function index()
     {
         // 
-           $tipo=Tipo::all();
+        $tipo=Tipo::all();
         return view('tipo.index')
         ->with('tipo',$tipo);
     }

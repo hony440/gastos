@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 use App\Tipo;
+use App\Categoria;
+use App\reg_movimientos;
+
 
 class Reg_movimientosController extends Controller
 {
@@ -15,7 +19,9 @@ class Reg_movimientosController extends Controller
     public function index()
     {
         //
-         return view('reg_movimientos.index');
+        $reg_movimientos=reg_movimientos::all();
+        return view('reg_movimientos.index')
+        ->with('reg_movimientos',$reg_movimientos);
     }
 
     /**
@@ -26,8 +32,11 @@ class Reg_movimientosController extends Controller
     public function create()
     {
         $tipo=Tipo::all();
+        $categoria=Categoria::all();
         return view('reg_movimientos.create')
-        ->with('tipo',$tipo);
+        ->with('tipo',$tipo)
+        ->with('categoria',$categoria);
+        ;
     }
 
     /**
@@ -39,6 +48,10 @@ class Reg_movimientosController extends Controller
     public function store(Request $request)
     {
         //
+        $data=$request->all();
+        $data['usu_id']=Auth::user()->usu_id;
+        reg_movimientos::create($data);
+        return redirect(route('reg_movimientos'));
     }
 
     /**

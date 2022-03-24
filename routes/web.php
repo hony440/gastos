@@ -42,3 +42,7 @@ Route::post('/tipo/destroy/{tip_id}','TipoController@destroy')->name('tipo.destr
 
 Route::get('/reg_movimientos','Reg_movimientosController@index')->name('reg_movimientos');
 Route::get('/reg_movimientos/create','Reg_movimientosController@create')->name('reg_movimientos.create');
+Route::post('/reg_movimientos/store','Reg_movimientosController@store')->name('reg_movimientos.store');
+Route::get('/reg_movimientos/edit/{mov_id}','Reg_movimientosController@edit')->name('reg_movimientos.edit');
+Route::post('/reg_movimientos/update/{mov_id}','Reg_movimientosController@update')->name('reg_movimientos.update');
+Route::post('/reg_movimientos/destroy/{mov_id}','Reg_movimientosController@destroy')->name('reg_movimientos.destroy');
