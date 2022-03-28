@@ -46,3 +46,4 @@ Route::post('/reg_movimientos/store','Reg_movimientosController@store')->name('r
 Route::get('/reg_movimientos/edit/{mov_id}','Reg_movimientosController@edit')->name('reg_movimientos.edit');
 Route::post('/reg_movimientos/update/{mov_id}','Reg_movimientosController@update')->name('reg_movimientos.update');
 Route::post('/reg_movimientos/destroy/{mov_id}','Reg_movimientosController@destroy')->name('reg_movimientos.destroy');
+Route::post('7reg_movimientos/search','Reg_movimientosController@index')->name('reg_movimientos.search');
