@@ -39,7 +39,9 @@ class Reg_movimientosController extends Controller
 
             ");
         return view('reg_movimientos.index')
-        ->with('reg_movimientos',$reg_movimientos);
+        ->with('reg_movimientos',$reg_movimientos)
+        ->with('desde',$desde)
+        ->with('hasta',$hasta);
     }
 
     /**

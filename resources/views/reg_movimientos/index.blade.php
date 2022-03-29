@@ -5,8 +5,8 @@
 
 <form action="{{route('reg_movimientos.search')}}" method="POST">
 	@csrf
-	Desde:<input type="date" name="desde">
-	Hasta:<input type="date" name="hasta">
+	Desde:<input type="date" name="desde" value="{{$desde}}">
+	Hasta:<input type="date" name="hasta" value="{{$hasta}}">
 	<button class="btn btn-primary">Buscar</button>
 </form>
 
