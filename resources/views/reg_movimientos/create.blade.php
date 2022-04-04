@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<script src="{{asset('js/reg_movimientos.js')}}"></script>
 
-	<form action="{{route('reg_movimientos.store')}}" method="POST">
+	<form action="{{route('reg_movimientos.store')}}" method="POST" onsubmit="return validar()">
 			@csrf
 			<div class="container">
 				<div class="row">
@@ -44,7 +45,7 @@
 					</div>
 
 					<div class="col-md-12 mt-3">
-						<button class="btn btn-primary">Guardar</button>
+						<button type="submit" class="btn btn-primary">Guardar</button>
 					</div>
 				</div>
 			</div>

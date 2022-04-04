@@ -9,7 +9,7 @@ use App\Tipo;
 use App\Categoria;
 use App\reg_movimientos;
 use DB;
-
+use PDF;
 
 class Reg_movimientosController extends Controller
 {
@@ -20,6 +20,9 @@ class Reg_movimientosController extends Controller
      */
     public function index(Request $request)
     {
+
+
+
         $data=$request->all();
         $desde=date('Y-m-d');
         $hasta=date('Y-m-d');
@@ -36,13 +39,19 @@ class Reg_movimientosController extends Controller
             JOIN tipo t ON m.tip_id=t.tip_id
             JOIN categoria c ON m.cat_id=c.cat_id
             WHERE m.mov_fecha BETWEEN '$desde' AND '$hasta'
+             ");
 
-            ");
+        if(isset($data['btn_pdf'])) {
+            $data=['reg_movimientos'=>$reg_movimientos];
+            $pdf = PDF::loadView('reg_movimientos.reporte',$data);
+            return $pdf->stream('reporte.pdf');
+        }
         return view('reg_movimientos.index')
         ->with('reg_movimientos',$reg_movimientos)
         ->with('desde',$desde)
-        ->with('hasta',$hasta);
-    }
+        ->with('hasta',$hasta)
+        ;
+}
 
     /**
      * Show the form for creating a new resource.

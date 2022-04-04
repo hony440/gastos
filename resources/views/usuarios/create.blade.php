@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<script src="{{asset('js/usuarios.js')}}"></script>
 <div class="container col-md-4">
 	<div class="col-md-12">
 		
 	<h1 class="bg-info">AGREGAR</h1>
-	<form action="{{route('usuarios.store')}}" method="POST" >
+	<form action="{{route('usuarios.store')}}" method="POST" onsubmit="return validar()">
 		<label for=""> Registre el usuario</label>
 		@csrf
 		<div class="row">
@@ -41,7 +42,7 @@
 				
 			</div>
 
-		<button class="btn btn-primary" >guardar</button>
+		<button  type="submit" class="btn btn-primary " >guardar</button>
 
 			
 		</div>

@@ -7,7 +7,8 @@
 	@csrf
 	Desde:<input type="date" name="desde" value="{{$desde}}">
 	Hasta:<input type="date" name="hasta" value="{{$hasta}}">
-	<button class="btn btn-primary">Buscar</button>
+	<button class="btn btn-primary" value="btn_buscar" name="btn_buscar">Buscar</button>
+	<button class="btn btn-danger" value="btn_pdf" name="btn_pdf">PDF</button>
 </form>
 
 <table class="table">
@@ -25,7 +26,7 @@
 	?>
 @foreach($reg_movimientos as $m)
 <?php
-  if($m->cat_id==1){
+  if($m->cat_id==2){
   	$t_ing+=$m->mov_cantidad;  	
   }else{
   	$t_egr+=$m->mov_cantidad;
@@ -62,6 +63,7 @@
   			<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 	0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 	.					5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 			0 1 1 0z"/>
 			</svg>
 			</button>
+
 	    </form>
 		</div>	    
 
@@ -72,7 +74,7 @@
 @endforeach
 <tr>
 	<th colspan="2">Totales:</th>
-	<th>Ingreos: {{$t_ing}} $</th>
+	<th>Ingresos: {{$t_ing}} $</th>
 	<th>Egresos: {{$t_egr}} $</th>
 	<th>Saldo: {{$t_sal}} $</th>
 
