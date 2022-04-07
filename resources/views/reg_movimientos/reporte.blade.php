@@ -2,7 +2,7 @@
 <h1 style="color:blue;"> <img src="https://www.doctorcifra.com/media/categorizar-ingresos-gastos-1024x1024.png" width="50" height="50" class="d-inline-block align-top">&nbsp;&nbsp;Reporte de Ingresos y Gastos</h1>
 	@csrf
 
-<table class="table table-dark table-striped">
+<table class="table table-striped">
 	<th scope="col">#</th>
 	<th scope="col">Usuario</th>
 	<th scope="col">Categoria</th>

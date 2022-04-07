@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-<h2>LISTA DE USUARIOS </h2> 
-<a href="{{route('usuarios.create')}}" class="btn btn-primary">NUEVO</a>
+<h2 class="bg-transparent text-success">Lista de usuarios</h2> 
+<a href="{{route('usuarios.create')}}" class="btn btn-primary" style="background:   #20c997;">NUEVO</a>
 
 <table class="table table-dark table-sm">
 <th>#</th>

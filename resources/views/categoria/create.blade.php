@@ -2,7 +2,7 @@
 
 @section('content')
 <script src="{{asset('js/categoria.js')}}"></script>
-	<h1 class="bg-dark">vista para el formulario</h1>
+	<h1 class="bg-info">Vista para el formulario</h1>
 	<form action="{{route('categoria.store')}}" method="POST" onsubmit="return validar()" >
 		@csrf
 		

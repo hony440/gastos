@@ -22,8 +22,6 @@ class UsuarioSeeder extends Seeder
             'email'=>'david1@hotmail.com',
             'password'=>bcrypt('12345678'),
             'created_at'=>date('Y-m-d H:i'),
-            'car_id'=>1,
-            'per_id'=>1,
 
         ]);
     }

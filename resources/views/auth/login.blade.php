@@ -5,14 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Ingreo al sistema') }}</div>
+                <div class="card-header bg-info" style="text-align: center;"> <img src="https://importadoraespinoza.com/Dinamic/Assets/TemplateiEspinoza/images/menu/CABLES-Y-CONVERTIDORES.png" width="60px" height="img-circle"> {{ __('INGRESO AL SISTEMA') }} </div> 
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="cedula" class="col-md-4 col-form-label text-md-right">{{ __('cedula') }}</label>
+                            <label for="cedula" class="col-md-4 col-form-label text-md-right">{{ __('Cedula') }}</label>
 
                             <div class="col-md-6">
                                 <input id="usu_cedula" type="usu_cedula" class="form-control @error('usu_cedula') is-invalid @enderror" name="usu_cedula" value="{{ old('usu_cedula') }}" required autocomplete="usu_cedula" autofocus>

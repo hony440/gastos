@@ -5,11 +5,10 @@
 <div class="container col-md-4">
 	<div class="col-md-12">
 		
-	<h1 class="bg-info">AGREGAR</h1>
+	<h1 class="bg-success">Registrar el usuario</h1>
 	<form action="{{route('usuarios.store')}}" method="POST" onsubmit="return validar()">
-		<label for=""> Registre el usuario</label>
 		@csrf
-		<div class="row">
+		<div class="row ">
 			<div class="col-md-6">
 				<label class=""> Registre el nombre</label>		
 				<input type="text" name="usu_nombre" id="usu_nombre" class="form-control">

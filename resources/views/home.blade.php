@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header bg-info">{{ __('CONTROL DE GASTOS') }} <br> {{ __('Inicio de sesion exitoso :D') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('Acabas de logearte xd!') }}
+                   
+                <img src="https://muybien.ar/wp-content/uploads/2021/04/bienvenidos-1.png" width="300px" style="margin-left: 24%;">
                 </div>
             </div>
         </div>
